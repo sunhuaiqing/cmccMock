@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 public class BocIntegralQuery {
 
 
+
+
     // 设置基本参数
     public BaseList getBaseList() {
         BaseList baseList = new BaseList();
