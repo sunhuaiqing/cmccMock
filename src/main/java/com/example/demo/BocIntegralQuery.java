@@ -1,5 +1,6 @@
 package com.example.demo;
 import com.example.demo.model.BaseList;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,8 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping(value = "/bocMoke/integralQuery")
 @RestController
 public class BocIntegralQuery {
+    @Value("${demo.name}")
+    private String name;
 
-    //123sfdaf
 
 
     // 设置基本参数
@@ -20,11 +22,9 @@ public class BocIntegralQuery {
         baseList.setMessage("业务处理成功Moker");
         return baseList;
     }
-
-
-
     @RequestMapping()
     public @ResponseBody String bocMoked(HttpServletRequest request) throws Exception {
+        System.out.println("@@@@@name():"+name);
         System.out.println("request.getQueryString():"+request.getQueryString());
         //System.out.println("request.changeSessionId():"+request.changeSessionId());
         System.out.println("request.getParameter(\"data\")():"+request.getParameter("data"));
