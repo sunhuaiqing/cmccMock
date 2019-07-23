@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class BocPointDeduction {
 
+
     @RequestMapping()
     public @ResponseBody String bocMoked(HttpServletRequest request) throws Exception {
         String resp = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
