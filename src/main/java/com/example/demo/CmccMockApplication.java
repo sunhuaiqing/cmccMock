@@ -57,7 +57,7 @@ public class CmccMockApplication {
 
 		Map<String, String[]> requestMap = request.getParameterMap();
 		Enumeration<String> name = request.getParameterNames();
-		String requestString = "Enumeration<String> name = request.getParameterNames():"+name;
+		String requestString = "@@@Enumeration<String> name = request.getParameterNames():"+name;
 		System.out.println("");
 		while (name.hasMoreElements()) {
 
@@ -522,7 +522,7 @@ public class CmccMockApplication {
 
 		baseList.setHmac(new MD5Encryption().getMD5(singData));
 		System.out.println("@@##$smsCodeId:"+request.getParameter("smsCodeId"));
-
+        System.out.println("@@##optCode:"+request.getParameter("optCode"));
 		responseMap.put("interCode", baseList.getInterCode());
 		responseMap.put("partnerId", baseList.getPartnerId());
 		responseMap.put("requestId", baseList.getRequestId());
@@ -530,7 +530,8 @@ public class CmccMockApplication {
 		responseMap.put("message", "移动B025错误短信验证码错误mock");
 		String optCode = request.getParameter("optCode");
 		//System.out.println("@@@@@@@@@ cmccValildVerifCode："+cmccValildVerifCode);
-		System.out.println("@@cmcc.jf006.ValildVerifCode:"+env.getProperty("cmcc.jf006.ValildVerifCode"));
+		//System.out.println("@@cmcc.jf006.ValildVerifCode:"+env.getProperty("cmcc.jf006.ValildVerifCode"));
+
 		if(optCode.equals("123456") ){
 			responseMap.put("returnCode", "0000");
 			responseMap.put("message", "操作成功mock扣减验证OK");
@@ -540,6 +541,10 @@ public class CmccMockApplication {
 			responseMap.put("message", "移动B025错误短信验证码错误mock");
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@2");
 		}
+
+        //responseMap.put("returnCode", "0000");
+        //responseMap.put("message", "操作成功mock扣减验证OK");
+
 		responseMap.put("signType", baseList.getSignType());
 		responseMap.put("type", baseList.getType());
 		responseMap.put("version", baseList.getVersion());

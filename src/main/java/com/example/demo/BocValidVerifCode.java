@@ -17,6 +17,8 @@ public class BocValidVerifCode {
         System.out.println("shq@@@request.getQueryString() :"+request.getQueryString());
         String resp;
         String resp1;
+
+
         resp1 = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
                     "<data>\n" +
                     "    <accessToken>F2hSkr2f8ng0YdjH1/ybkmKoGJ+iSl+27/d4bBbG42LtQyUFXswSW8G7i9vkGc9Xi92n01oXiATdjsEBM4GpRMfsRVQIadNrbTTjICLObRoVa1rMm15Khf2nVX/Xf42fp9AwLwdQkUR2Cu/q2u1hQVZRJkgytyVbQv6WD/M8+bM=</accessToken>\n" +
