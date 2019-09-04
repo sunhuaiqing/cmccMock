@@ -39,6 +39,15 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 		</dependency>
+
+        <!-- 2019.8.1  在pom.xml加入视图解析器模块 现在文字的返回成功，开始配置跳转页面
+         https://blog.csdn.net/qq_36820717/article/details/79978281
+         -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
 		
 	</dependencies>
 
