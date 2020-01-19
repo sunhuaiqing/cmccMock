@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 @SpringBootApplication
 @RequestMapping(value = "/jfInter")
 public class CmccMockApplication {
-	//读取配置文件，中移动兑分验证码是否进行校验
+	//读取配置文件，中移动兑分验证码是否进行校验12
 	//@Value("${cmcc.jf006.ValildVerifCode}")
 	//String cmccValildVerifCode;
 
